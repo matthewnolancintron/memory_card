@@ -7,7 +7,7 @@ export default function CardSection(props){
     );
     
     return (
-        <ul>
+        <ul className='cardSection'>
           {cards}
         </ul>
       );
