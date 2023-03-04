@@ -25,8 +25,8 @@ const shapesArray= [{
   },
   {
     id: 6,
-    name: "lemon",
-    svg: <path d="M 50 90 C 20 70, 20 40, 50 20 C 80 40, 80 70, 50 90 Z" stroke="black" strokeWidth="2" fill="none" />
+    name: "lime",
+    svg: <path d="M 50 90 C 20 70, 20 40, 50 20 C 80 40, 80 70, 50 90 Z" stroke="black" strokeWidth="2" fill="lime" />
   },
   {
     id: 7,
