@@ -1,9 +1,9 @@
 import Card from './Card.jsx'
 
 
-export default function CardSection(props){
-    let cards = props.shapes.map((shape) =>
-      <Card key={shape.id} shape={shape.svg} name={shape.name} />
+export default function CardSection({shapes,handleCardSelection}){
+    let cards = shapes.map((shape) =>
+      <Card key={shape.id} shape={shape.svg} name={shape.name} id={shape.id} handleCardSelection={() =>handleCardSelection(shape.id)} />
     );
     
     return (
