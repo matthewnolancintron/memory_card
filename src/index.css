@@ -16,139 +16,156 @@ body {
 .topSection {
   height: 20%;
   background-color: darkgreen;
-  display:flex;
+  display: flex;
   justify-content: space-around;
   align-items: center;
-  color:floralwhite;
-  
+  color: floralwhite;
+
 }
 
 .cardSection {
   flex-grow: 1;
   background-color: lightgray;
-  margin:0;
-
+  margin: 0;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  padding-left: 50px;
+  padding-right: 50px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  grid-auto-rows: minmax(200px, auto);
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-auto-rows: minmax(100px, auto);
+  gap: 10px;
 
   justify-items: center;
   align-items: center;
-  }
-
-  .card{
-    background-color: lightgreen;
-    list-style-type: none;
-    padding-bottom:20px;
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border:solid black 2px;
-    box-shadow: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.2);
-    transition: box-shadow 0.3s ease-in-out;
-    border-radius: 5%;
 
 
-      /* animation styles */
+}
+
+.card {
+  background-color: lightgreen;
+  list-style-type: none;
+  padding-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: solid black 2px;
+  box-shadow: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s ease-in-out;
+  border-radius: 5%;
+
+
+  /* animation styles */
   animation-name: sway;
   animation-duration: 1s;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
-  }
+}
 
-  .card:hover {
-    box-shadow: 0 0 20px rgba(0,0,0,0.4);
-    cursor: pointer;
-    animation: wiggle 0.5s ease-in-out 0.1s infinite;
-  }
+.card:hover {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  animation: wiggle 0.5s ease-in-out 0.1s infinite;
+}
 
-  .card:active {
-    box-shadow: none;
-    transition: transform 0.1s ease-in;
-    animation: pause;
-  }
-  
-
-  .cardImg{
-    background-color:rgba(255, 255, 255,1);
-  }
-
-  .cardName{
-    background-color: chocolate;
-    width:100%;
-    text-align: center;
-    margin-top: 0;
-    color:whitesmoke;
-  }
+.card:active {
+  box-shadow: none;
+  transition: transform 0.1s ease-in;
+  animation: pause;
+}
 
 
+.cardImg {
+  background-color: rgba(255, 255, 255, 1);
+}
 
-  @keyframes wave {
-    0% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(-20px);
-    }
-    100% {
-      transform: translateY(0);
-    }
-  }
+.cardName {
+  background-color: chocolate;
+  width: 100%;
+  text-align: center;
+  margin-top: 0;
+  color: whitesmoke;
+}
 
-  @keyframes wiggle {
-    0% {
-      transform: rotate(0deg);
-    }
-    20% {
-      transform: rotate(-10deg);
-    }
-    40% {
-      transform: rotate(10deg);
-    }
-    60% {
-      transform: rotate(-5deg);
-    }
-    80% {
-      transform: rotate(5deg);
-    }
-    100% {
-      transform: rotate(0deg);
-    }
-  }
-  
-  @keyframes pause {
-    0% {
-      transform: translateX(0);
-    }
-    50% {
-      transform: translateX(-10px);
-    }
-    100% {
-      transform: translateX(0);
-    }
+
+
+@keyframes wave {
+  0% {
+    transform: translateY(0);
   }
 
-  @keyframes sway {
-    0% {
-      transform: rotate(0deg);
-    }
-    25% {
-      transform: rotate(2deg);
-    }
-    75% {
-      transform: rotate(-2deg);
-    }
-    100% {
-      transform: rotate(0deg);
-    }
+  50% {
+    transform: translateY(-20px);
   }
-  
-  
-  
-  /* .cardSection .card:nth-child(1) {
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes wiggle {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  20% {
+    transform: rotate(-10deg);
+  }
+
+  40% {
+    transform: rotate(10deg);
+  }
+
+  60% {
+    transform: rotate(-5deg);
+  }
+
+  80% {
+    transform: rotate(5deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes pause {
+  0% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(-10px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes sway {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(2deg);
+  }
+
+  75% {
+    transform: rotate(-2deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+
+
+/* .cardSection .card:nth-child(1) {
     animation: wave 0.5s ease-in-out 0.1s;
     animation:wiggle 0.5 ease infinite;
   }
